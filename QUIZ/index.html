@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiz Application</h1>
+    
+    
+    <!-- Start Quiz Button -->
+    <button id="start" onclick="startQuiz()">Start Quiz</button>
+
+    <!-- Quiz Content -->
+    <div id="quiz" hidden>
+      <p id="question-number"></p>
+      <p id="question">Question will appear here...</p>
+      <ul id="answers">
+        <!-- Options will be dynamically added here -->
+      </ul>
+      <p id="attempts">Attempts Left: 3</p>
+
+      <div id="result" hidden></div> <!-- Feedback on answer correctness -->
+      <div id="explanation" hidden></div> <!-- Explanation -->
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="prev" onclick="prevQuestion()" disabled>Previous</button>
+      <button id="next" onclick="nextQuestion()" disabled>Next</button>
+      <button id="submit" onclick="submitQuiz()" hidden>Submit</button>
+    </div>
+
+    <!-- Timer -->
+    <p id="timer">Time Left: <span id="time">300</span> seconds</p>
+
+    <!-- Score Section -->
+    <div id="score" hidden>
+      <h2>Your Score:</h2>
+      <p id="score-value"></p>
+    </div>
+
+    <!-- End Quiz Button -->
+    <button id="end" onclick="endQuiz()" hidden>End Quiz</button>
+    <footer>
+      <p>Designed with <span>💙</span> by Dasun Weerawardhana</p>
+    </footer>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+
+ 
+
+</html>
